@@ -1,0 +1,303 @@
+*{padding: 0;margin: 0; box-sizing: border-box;}
+
+html , body {
+    width: 100%;
+    height: 100vh;
+    
+    font-size: 16px;
+    background-color: var(--backgroundRed);
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    /* Primary */
+
+ --backgroundRed: #ff7a7a; 
+ --Green: #38cc8c;
+
+ /* Accent */
+
+    --Blue: #6055a5;
+
+    /* Neutral */
+
+--DarkBlue: #3e3c49 ;
+--GrayishBlue: #b9b6d3;
+
+}
+
+
+
+.box {
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    padding: 0 10%;
+    margin: 0 auto;
+    background-color: var(--backgroundRed);
+    background-image: url(images/bg-intro-desktop.png);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.w50 {
+    width: 50%;
+    height: 100vh;
+    float: right;
+    margin: 0 auto;
+}
+
+.text_float {
+    width: 80%;
+    max-width: 600px;
+    height: 60px;
+    border-radius: 10px;
+    margin: 0 auto;
+    background-color: var(--Blue);
+    text-align: center;
+    position: relative;
+    top: 17%;
+
+    box-shadow: 0 10px 0 0px rgba(36, 35, 35, 0.205);
+}
+
+.text_float > p {
+    padding-top: 15px;
+    color: var(--GrayishBlue);
+    font-weight: 600;
+}
+
+.text_float > p > span {
+    color: white;
+    font-weight: 600;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    /* height: 660px; */
+    height: 580px;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 10% 0;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    top: 20%;
+    box-shadow: 0 10px 0 0px rgba(36, 35, 35, 0.205);
+}
+
+form > input {
+    width: 80%;
+    padding: 20px 30px;
+    border-radius: 4px;
+    outline: none;
+    border: 2px solid #3e3c491a;
+    color: #3e3c49;
+    font-weight: 700;
+    font-size: 14px;
+}
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+
+
+
+form > input:hover {
+    border: 2px solid  var(--Blue);
+    opacity: 0.9;
+}
+
+form > input[type=button]{
+    background-color: var(--Green);
+    border: none;
+    border-bottom: 4px solid #31b87d;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    opacity: 1;
+    text-align: center;
+    font-size: 100%;
+}
+
+
+/* aqui esta o icone quando der erro na altenticaçao */
+
+form > i {
+    display: none;
+    position: relative;
+}
+form > i > img {
+    position: absolute;
+    top: -41px;
+    left: 10vw;
+}
+
+/* ate aqui */
+
+.terms {
+    margin-top: 20px;
+    padding: 0 2%;
+}
+
+.terms > p {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--GrayishBlue);
+    opacity: 0.8;
+    padding: 0 4%;
+    text-align: center;
+}
+.terms > p > span {
+    font-size: 13px;
+    color: var(--backgroundRed);
+    font-weight: 700;
+}
+
+.w50i {
+    width: 50%;
+    height: 100vh;
+    float: left;
+    margin: 0 auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 60%;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+    top: 40%;
+}
+
+.content > h1 {
+    font-size: 45px;
+    font-weight: 800;
+    color: white;
+    line-height: 50px;
+}
+
+.content > P {
+    color: white;
+    font-size: 14px;
+}
+
+
+/* class error */
+
+.erro {
+    border: 2px solid var(--backgroundRed);
+    background-image: url(/images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position-x: 94%;
+    background-position-y: 14px;
+}
+
+.sucess {
+    border: 2px solid var(--Green);
+}
+
+.small {
+    display: none;
+    color: var(--backgroundRed);
+    width: 80%;
+    text-align: right;
+}
+
+@media screen and (min-width:300px) and (max-width:992px){
+    html, body {
+        height: 100vh;
+    }
+    .box {
+        padding: 0 2%;
+        background-position:center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(images/bg-intro-mobile.png);
+    }
+    .w50 {
+        max-width: 600px;
+        width: 100%;
+        height: 900px;
+        margin: 0 auto;
+        top: -10%;
+        position: relative;
+        left: -50%;
+        transform: translate(50%);
+    }
+    .w50i {
+        top: 3%;
+        position: relative;
+        width: 100%;
+        height: 400px;
+    }
+    .content {
+        width: 100%;
+        margin: 0 auto;
+        height: 300px;
+    }
+    .content> h1 {
+        text-align: center;
+        font-size: 35px;
+    }
+    .content > p {
+        text-align: center;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    form {
+        max-width: 100%;
+        width: 90%;
+        height: 540px;
+    }
+    form > input[type=button]{
+        font-size: 70%;
+    }
+    form > input[type=button]{
+        width: 100%;
+        max-width: 80%;
+    }
+    .text_float {
+        width: 100%;
+        max-width: 90%;
+        height: 90px;
+    }
+    .text_float > p {
+      padding: 7% 0;
+      margin: 0 auto;
+    }
+    .terms > p {
+        text-align: center;
+        width: 100%;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:1440px) {
+    .box {
+        padding: 0;
+    }
+
+    .w50i {
+        width: 40%;
+    }
+    .w50 {
+        width: 60%;
+    }
+} 
+
