@@ -200,7 +200,7 @@ form > i > img {
 
 .erro {
     border: 2px solid var(--backgroundRed);
-    background-image: url(/images/icon-error.svg);
+    background-image: url(images/icon-error.svg);
     background-repeat: no-repeat;
     background-position-x: 94%;
     background-position-y: 14px;
