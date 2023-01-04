@@ -6,7 +6,6 @@ const btn = document.querySelector('.button')
 
 })  
 
-
     function closePage(){
         let close = document.querySelector('.x')
         .addEventListener('click', ()=> {
@@ -15,8 +14,6 @@ const btn = document.querySelector('.button')
         })
         
     }
-
-
 
 
 function validarFormulario(){
@@ -29,7 +26,7 @@ function validarFormulario(){
         var chamada = document.querySelector('.center_row');
         chamada.style.display = 'block';     
         closePage();
-           
+
     } else {
         console.log('erro, algum campus esta errado')
     }
