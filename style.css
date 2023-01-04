@@ -336,6 +336,21 @@ form > i > img {
         max-width: 80%;
         margin: 0 auto;
     }
+    .center_row {
+        display: none;
+        width:100%;
+        margin: 0 auto;
+        padding: 70px;
+        background-color:var(--Blue);
+        border-radius: 10px;
+    
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        z-index: 10;
+        
+        transform: translate(-50%, -50%);
+    }
 }
 
 @media screen and (min-width:992px) and (max-width:1440px) {
