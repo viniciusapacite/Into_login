@@ -1,16 +1,41 @@
 
 const btn = document.querySelector('.button')
 .addEventListener('click', (e)=>{
-   validarNome();
-   validarLast_nome();
-   validarEmail();
-   validarPass();
-})
+   validarFormulario();
+   closePage();
+
+})  
 
 
-function validarNome(){
+    function closePage(){
+        let close = document.querySelector('.x')
+        .addEventListener('click', ()=> {
+            var chamada = document.querySelector('.center_row');
+            chamada.style.display = 'none';    
+        })
+        
+    }
+
+
+
+
+function validarFormulario(){
+    
+    if (document.querySelector('#email').value.length > 15 && 
+    document.getElementById('password').value.length > 8 &&
+    document.getElementById('lastname').value.length > 3 &&
+    document.getElementById('firstname').value.length > 3){
+        
+        var chamada = document.querySelector('.center_row');
+        chamada.style.display = 'block';     
+        closePage();
+           
+    } else {
+        console.log('erro, algum campus esta errado')
+    }
+    
     var nome = document.getElementById('firstname');
-
+    
     if (nome.value == '' || nome.value.length < 3){
         nome.classList.add('erro');
         nome.classList.remove('sucess');
@@ -20,9 +45,7 @@ function validarNome(){
         nome.classList.remove('erro');
         nome.classList.add('sucess');
     }
-}
 
-function validarLast_nome(){
     var lastNome = document.getElementById('lastname');
 
     if (lastNome.value == '' || lastNome.value.length < 3){
@@ -33,9 +56,8 @@ function validarLast_nome(){
         lastNome.classList.remove('erro');
         lastNome.classList.add('sucess');
     }
-}
 
-function validarEmail(){
+
     var email = document.querySelector('#email');  
     
     if (email.value == '' || email.value.length < 15){
@@ -60,10 +82,8 @@ function validarEmail(){
         email.innerHTML = '';
         email.style.color = '#38cc8c';
     }
-}
-    
+ 
 
-function validarPass(){
     var password = document.getElementById('password');
 
     if (password.value == '' || password.value.length < 8){
@@ -74,4 +94,5 @@ function validarPass(){
         password.classList.remove('erro');
         password.classList.add('sucess');
     }
+
 }

@@ -195,12 +195,62 @@ form > i > img {
     font-size: 14px;
 }
 
+.x {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 30px;
+    float: left;
+    position: relative;
+    cursor: pointer;
+}
+.one {
+    width: 30px;
+    height: 4px;
+    background-color: var(--backgroundRed);
+    transform: rotate(50deg);
+    position: absolute;
+    top: 50%;
+    left: 0%;
+}
+.one:nth-child(2){
+    transform: rotate(130deg);    
+}
+.center_row {
+    display: none;
+    width:100%;
+    margin: 0 auto;
+    padding: 70px;
+    background-color:var(--Blue);
+    border-radius: 10px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    
+    transform: translate(-50%, -50%);
+}
+
+.message {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    color:var(--Green);
+}
+.message > p {
+    margin-top: 10px;
+    padding: 0 4%;
+}
+
 
 /* class error */
 
 .erro {
     border: 2px solid var(--backgroundRed);
-    background-image: url(images/icon-error.svg);
+    background-image: url(../images/icon-error.svg);
     background-repeat: no-repeat;
     background-position-x: 94%;
     background-position-y: 14px;
@@ -299,5 +349,11 @@ form > i > img {
     .w50 {
         width: 60%;
     }
+    
 } 
 
+@media screen and (max-width:1680px) {
+    .box {
+        padding: 0 4%;
+    }
+}
