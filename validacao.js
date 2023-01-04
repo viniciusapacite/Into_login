@@ -9,10 +9,12 @@ const btn = document.querySelector('.button')
     function closePage(){
         let close = document.querySelector('.x')
         .addEventListener('click', ()=> {
+
             document.querySelector('#email').value = '';
             document.getElementById('password').value = '';
             document.getElementById('lastname').value = '';
             document.getElementById('firstname').value = '';
+            
             var chamada = document.querySelector('.center_row');
             chamada.style.display = 'none';  
             
