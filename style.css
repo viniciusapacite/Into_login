@@ -345,7 +345,7 @@ form > i > img {
         border-radius: 10px;
     
         position: absolute;
-        top: 90%;
+        top: 100%;
         left: 50%;
         z-index: 10;
         
